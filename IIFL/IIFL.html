@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      (function(){
+        var a = 1;
+
+        function test(){
+          console.log(++a);
+        }
+        //when the function is executed, this variable $ will be assigned a value
+        window.$ = function(){
+          return {
+            test:test
+          }
+        }
+      })();
+
+      $().test();
+
+
+
+    </script>
+
+  </body>
+</html>
